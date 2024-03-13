@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-rest
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mariadb://${MYSQL_HOST:localhost}:3306/spring_db
+    username: PUBLIC
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
+  mvc:
+    static-path-pattern: /static/**
