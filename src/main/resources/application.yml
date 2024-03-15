@@ -3,7 +3,12 @@ spring:
     name: spring-rest
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
   datasource:
     url: jdbc:mariadb://${MYSQL_HOST:localhost}:3306/spring_db
     username: PUBLIC

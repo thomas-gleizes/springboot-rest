@@ -1,26 +1,17 @@
-package org.example.springrest.validations;
+package org.example.springrest.user;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
 
-public class RegisterForm {
+public class LoginForm {
 
-    @Min(3)
-    @Max(64)
-    private String name;
-
-    @NotBlank
-    @Max(64)
+    @Email
     private String email;
 
     @Min(6)
-    @Max(32)
+    @Max(64)
     private String password;
-
-    public String getName() {
-        return name;
-    }
 
     public String getEmail() {
         return email;
